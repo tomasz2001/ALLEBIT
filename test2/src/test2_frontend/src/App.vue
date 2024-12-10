@@ -1,16 +1,27 @@
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { test2_backend } from 'declarations/test2_backend/index';
-let greeting = ref('');
 
-async function handleSubmit(e) {
-  e.preventDefault();
-  const target = e.target;
-  const name = target.querySelector('#name').value;
-  await test2_backend.greet(name).then((response) => {
-    greeting.value = response;
-  });
+const greeting = ref('');
+const offers = ref([]);
+
+async function getOffers(n) {
+  const fetchedOffers = [];
+  for (let i = 0; i < n; i++) {
+    try {
+      const offer = await test2_backend.oferta_cek(i);
+      fetchedOffers.push(offer);
+    } catch (error) {
+      console.error(`Error fetching offer ${i}:`, error);
+      break;
+    }
+  }
+  offers.value = fetchedOffers;
 }
+
+onMounted(async () => {
+  await getOffers(2);
+});
 </script>
 
 <template>
@@ -18,11 +29,12 @@ async function handleSubmit(e) {
     <img src="/logo2.svg" alt="DFINITY logo" />
     <br />
     <br />
-    <form action="#" @submit="handleSubmit">
-      <label for="name">Enter your name: &nbsp;</label>
-      <input id="name" alt="Name" type="text" />
-      <button type="submit">Click Me!</button>
-    </form>
-    <section id="greeting">{{ greeting }}</section>
+    <div v-if="offers.length">
+      <div v-for="offer in offers" :key="offer.cozaco">
+        {{ offer.cozaco }}
+        {{ offer.kontakt }}
+      </div>
+    </div>
+    <div v-else>Ładowanie ofert...</div>
   </main>
 </template>
