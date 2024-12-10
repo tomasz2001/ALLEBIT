@@ -43,8 +43,11 @@ offer.add({ cozaco = cozaco; kontakt = kontakt; oferta = oferta; kapital = kapit
 return({log = "OK"; deb = "oferta dodana"});
 
 
+
 };
 
 
 };
 };
+
+//lubie placki
