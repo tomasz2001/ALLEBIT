@@ -10,6 +10,12 @@ type Freedom = {
 
    };
 
+type Debug = {
+  log : Text;
+  deb : Text;
+
+};
+
 let offer = Buffer.Buffer<Freedom>(15);
 
 offer.add({ cozaco = "Oferta 1"; kontakt = "andzej facebook"; oferta = "sprzedam byc na olx"; kapital = "40000 satosi"; cena = "100000 USD za BTC" });
@@ -29,11 +35,11 @@ let result = offer.get(0);
 };
 
 
-public func oferta_add(cozaco: Text, kontakt: Text, oferta: Text, kapital: Text, cena: Text,) : async Text {
+public func oferta_add(cozaco: Text, kontakt: Text, oferta: Text, kapital: Text, cena: Text,) : async Debug {
 
 let x = offer.remove(0);
 offer.add({ cozaco = cozaco; kontakt = kontakt; oferta = oferta; kapital = kapital; cena = cena });
 
-return("oferta dodana");
+return({log = "OK"; deb = "oferta dodana"});
 };
 };
