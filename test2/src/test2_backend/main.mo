@@ -41,9 +41,12 @@ let x = offer.remove(0);
 offer.add({ cozaco = cozaco; kontakt = kontakt; oferta = oferta; kapital = kapital; cena = cena });
 
 return({log = "OK"; deb = "oferta dodana"});
+<<<<<<< Updated upstream
 
 };
 
 
+=======
+>>>>>>> Stashed changes
 };
 };
