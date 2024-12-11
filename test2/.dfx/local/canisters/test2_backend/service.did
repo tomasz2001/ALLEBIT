@@ -1,3 +1,18 @@
+type Freedom = 
+ record {
+   cena: text;
+   cozaco: text;
+   kapital: text;
+   kontakt: text;
+   oferta: text;
+ };
+type Debug = 
+ record {
+   deb: text;
+   log: text;
+ };
 service : {
-  greet: (text) -> (text) query;
+  oferta_add: (text, text, text, text, text) -> (Debug);
+  oferta_cek: (nat) -> (Freedom) query;
+  test: () -> (Freedom) query;
 }
