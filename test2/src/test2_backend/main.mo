@@ -21,14 +21,13 @@ type Debug = {
 
 };
 
-let delay : Nat = 1_620_000_000_000;
-var time : Int = Time.now();
-var meit : Nat = 1;
+var delay : Int = 20_000_000_000;
+var meit : Int = 1;
+var time = Time.now();
+let offer = Buffer.Buffer<Freedom>(25);
 
-let offer = Buffer.Buffer<Freedom>(17);
+offer.add({ cozaco = "kupie ICP za SER"; kontakt = "discord .b_a_s_i_c."; oferta = "hej od kupie icp jeżeli ktoś nie chce ja się nimi chetnie zajmę ;p"; kapital = "20 KILO SERA"; cena = "ICP za KILO SERA" });
 
-offer.add({ cozaco = "Oferta 1"; kontakt = "andzej facebook"; oferta = "sprzedam byc na olx"; kapital = "40000 satosi"; cena = "100000 USD za BTC" });
-offer.add({ cozaco = "Oferta 2"; kontakt = "andzej facebook"; oferta = "sprzedam byc na olx"; kapital = "40000 satosi"; cena = "100000 USD za BTC" });
 
 public query func oferta_cek(marker: Nat) : async Freedom {
 
@@ -47,15 +46,27 @@ public func oferta_add(cozaco: Text, kontakt: Text, oferta: Text, kapital: Text,
 if (Text.size(cozaco) == 0 or Text.size(kontakt) == 0 or Text.size(oferta) == 0 or Text.size(kapital) == 0 or Text.size(cena) == 0) {
  return({log = "ER"; deb = "przynajmniej jedno pole jest puste"});
 };
+if (Text.size(cozaco) >= 70 or Text.size(kontakt) >= 100 or Text.size(oferta) >= 1000 or Text.size(kapital) >= 100 or Text.size(cena) >= 100) {
+ return({log = "ER"; deb = "za dużo znaków w jednym polu"});
+};
 
-if (15 <= offer.size()){
+time := Time.now();
+if (time <= (meit + delay)) {
+  return { log = "ER"; deb = "wewnętrzny delay się nie skończył, poczekaj chwilę" };
+};
+
+
+
+
+if (24 <= offer.size()){
 let x = offer.remove(0);
-
 
 };
 
 offer.add({ cozaco = cozaco; kontakt = kontakt; oferta = oferta; kapital = kapital; cena = cena });
-let time = Time.now();
+time := Time.now();
+meit := time;
+
 return({log = "OK"; deb = "oferta dodana"});
 };
 };
