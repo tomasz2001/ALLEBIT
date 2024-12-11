@@ -2,7 +2,6 @@
 import { onMounted, ref } from 'vue';
 import { test2_backend } from 'declarations/test2_backend/index';
 
-const greeting = ref('');
 const offers = ref([]);
 
 async function getOffers(n) {
@@ -20,19 +19,28 @@ async function getOffers(n) {
 }
 
 onMounted(async () => {
-  await getOffers(2);
+  await getOffers(10);
 });
 </script>
 
 <template>
+  <header>
+    <nav>
+      <div class="nav-title"><h1 class="dot-font">AlleBit</h1></div>
+      <ul class="nav-menu">
+        <a href="#"><li class="dot-font">Przeglądaj oferty</li></a>
+        <a href="add-offer.html"><li class="dot-font">Utwórz ofertę</li></a>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <img src="/logo2.svg" alt="DFINITY logo" />
-    <br />
-    <br />
-    <div v-if="offers.length">
-      <div v-for="offer in offers" :key="offer.cozaco">
-        {{ offer.cozaco }}
-        {{ offer.kontakt }}
+    <div v-if="offers.length" class="offers">
+      <div v-for="offer in offers" :key="offer.cozaco" class="offer">
+        <h1 class="dot-font">{{ offer.cozaco }}</h1>
+        <p>{{ offer.oferta }}</p>
+        <p>{{ offer.kapital }}</p>
+        <h2 class="dot-font">{{ offer.cena }}</h2>
+        <p>{{ offer.kontakt }}</p>
       </div>
     </div>
     <div v-else>Ładowanie ofert...</div>
