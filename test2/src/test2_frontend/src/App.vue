@@ -8,6 +8,9 @@ let output = "";
 let request_status = "";
 const isDarkTheme = ref(window.matchMedia('(prefers-color-scheme: dark)').matches);
 
+// Zmienna przechowująca informację, czy oferty zostały załadowane
+let offersLoaded = false;
+
 async function handleSubmit(e) {
   e.preventDefault();
   const target = e.target;
@@ -21,10 +24,18 @@ async function handleSubmit(e) {
   output = result.deb;
   request_status = result.log;
   show_output = true;
-  await getOffers(10);
+
+  // Resetujemy flagę, aby ponownie załadować oferty
+  offersLoaded = false;
+
+  // Po dodaniu oferty, ponownie załaduj oferty
+  await getOffers(25);
 }
 
 async function getOffers(n) {
+  // Jeśli oferty zostały już załadowane, nie wykonujemy zapytania do backendu
+  if (offersLoaded) return;
+
   const fetchedOffers = [];
   for (let i = 0; i < n; i++) {
     try {
@@ -35,7 +46,10 @@ async function getOffers(n) {
       break;
     }
   }
-  offers.value = fetchedOffers;
+
+  // Odwracamy kolejność ofert
+  offers.value = fetchedOffers.reverse();
+  offersLoaded = true; // Zmieniamy stan na załadowane oferty
 }
 
 function toggleTheme() {
@@ -43,7 +57,8 @@ function toggleTheme() {
 }
 
 onMounted(async () => {
-  await getOffers(10);
+  // Ładujemy oferty tylko raz
+  await getOffers(25);
 });
 </script>
 
@@ -58,7 +73,7 @@ onMounted(async () => {
   </header>
 
   <main :class="{ dark: isDarkTheme }">
-    <div v-show="show_output == true" class="message" v-bind:class="`${!request_status['OK'] ? 'okMessageStyle' : 'errorMessageStyle'}`">
+    <div v-show="show_output" class="message" :class="`${!request_status['OK'] ? 'okMessageStyle' : 'errorMessageStyle'}`">
       {{ output }}
     </div>
     <div class="add-offer">
