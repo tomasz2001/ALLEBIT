@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PortForwardingSettings">
+    <ports>
+      <entry key="2497">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="2497" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="3000">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="3000" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="4943">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="4943" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="32937">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="32937" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="34213">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="34213" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="34487">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="34487" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="37485">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="37485" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="38753">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="38753" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="38885">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="38885" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="39107">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="39107" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="39275">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="39275" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="39961">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="39961" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="40103">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="40103" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="41221">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="41221" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="42329">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="42329" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="43119">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="43119" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="43199">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="43199" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="43495">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="43495" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="43951">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="43951" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="44307">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="44307" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+    </ports>
+  </component>
+</project>
