@@ -4,6 +4,19 @@ import { test2_backend } from 'declarations/test2_backend/index';
 
 const offers = ref([]);
 
+async function handleSubmit(e) {
+  e.preventDefault();
+  const target = e.target;
+  const title = target.querySelector('#new_offer-title').value;
+  const description = target.querySelector('#new_offer-description').value;
+  const capital = target.querySelector('#new_offer-capital').value;
+  const price = target.querySelector('#new_offer-price').value;
+  const contact = target.querySelector('#new_offer-contact').value;
+
+  await test2_backend.oferta_add(title, contact, description, capital, price);
+  await getOffers(10);
+}
+
 async function getOffers(n) {
   const fetchedOffers = [];
   for (let i = 0; i < n; i++) {
@@ -27,13 +40,32 @@ onMounted(async () => {
   <header>
     <nav>
       <div class="nav-title"><h1 class="dot-font">AlleBit</h1></div>
-      <ul class="nav-menu">
-        <a href="#"><li class="dot-font">Przeglądaj oferty</li></a>
-        <a href="add-offer.html"><li class="dot-font">Utwórz ofertę</li></a>
-      </ul>
     </nav>
   </header>
   <main>
+    <div class="add-offer">
+      <form action="#" @submit="handleSubmit">
+        <label class="dot-font">Tytuł</label> <br>
+        <input id="new_offer-title" alt="new_offer-title" type="text"> <br>
+        <label class="dot-font">Opis</label> <br>
+        <textarea id="new_offer-description" alt="new_offer-description" type="text"></textarea> <br>
+        <div class="grid-3">
+          <div style="margin: 0px 5px 0px 0px;">
+            <label class="dot-font">Kapitał</label> <br>
+            <input id="new_offer-capital" alt="new_offer-capital" type="text"> <br>
+          </div>
+          <div style="margin: 0px 5px;">
+            <label class="dot-font">Cena</label> <br>
+            <input id="new_offer-price" alt="new_offer-price" type="text"> <br>
+          </div>
+          <div style="margin: 0px 0px 0px 5px;">
+            <label class="dot-font">Kontakt</label> <br>
+            <input id="new_offer-contact" alt="new_offer-contact" type="text"> <br>
+          </div>
+        </div>
+        <button type="submit" class="dot-font">Dodaj ogłoszenie</button>
+      </form>
+    </div>
     <div v-if="offers.length" class="offers">
       <div v-for="offer in offers" :key="offer.cozaco" class="offer">
         <h1 class="dot-font">{{ offer.cozaco }}</h1>
@@ -43,6 +75,9 @@ onMounted(async () => {
         <p>{{ offer.kontakt }}</p>
       </div>
     </div>
-    <div v-else>Ładowanie ofert...</div>
+    <div v-else class="wait-container">
+      <div class="wait-icon"><i class="bi bi-hourglass-top"></i></div>
+      <p class="dot-font wait-label">Czekaj...</p>
+    </div>
   </main>
 </template>

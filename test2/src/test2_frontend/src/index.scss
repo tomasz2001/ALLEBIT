@@ -39,24 +39,61 @@ nav {
   justify-content: space-between;
 }
 
-nav>ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-nav>ul>a {
-  margin: 0px 5px;
-  transition: all 1s;
-}
-
-nav>ul>a:hover {
-  text-decoration: underline black;
-}
-
 .offers {
   display: grid;
   grid-template-columns: repeat(4, minmax(50px, 1fr));
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+form .dot-font {
+  font-weight: 700;
+}
+
+form label {
+  font-size: 20px;
+}
+
+form input {
+  width: 100%;
+}
+
+form textarea {
+  width: 100%;
+}
+
+form button {
+  font-size: 17px;
+  font-weight: 900;
+  border-radius: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 3px;
+  background-color: white;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+}
+
+.wait-icon {
+  animation-name: spinning-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  width: fit-content;
+  height: fit-content;
+  margin: 0px auto;
+  font-size: 30px;
+}
+
+.wait-label {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.wait-container {
+  text-align: center;
 }
 
 @media screen and (max-width: 960px) {
@@ -69,4 +106,12 @@ nav>ul>a:hover {
   .offers {
     grid-template-columns: repeat(1, minmax(50px, 1fr));
   }
+}
+
+@keyframes spinning-animation {
+  0% {transform: rotate(0deg);}
+  //25% {transition: rotate(90deg);}
+  50% {transform: rotate(180deg);}
+  //75% {transform: rotate(270deg);}
+  100% {transform: rotate(360deg);}
 }
