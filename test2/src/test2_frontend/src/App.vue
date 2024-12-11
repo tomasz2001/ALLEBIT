@@ -46,21 +46,21 @@ onMounted(async () => {
     <div class="add-offer">
       <form action="#" @submit="handleSubmit">
         <label class="dot-font">Tytuł</label> <br>
-        <input id="new_offer-title" alt="new_offer-title" type="text"> <br>
+        <input id="new_offer-title" alt="new_offer-title" type="text" required> <br>
         <label class="dot-font">Opis</label> <br>
-        <textarea id="new_offer-description" alt="new_offer-description" type="text"></textarea> <br>
+        <textarea id="new_offer-description" alt="new_offer-description" type="text" required></textarea> <br>
         <div class="grid-3">
           <div style="margin: 0px 5px 0px 0px;">
             <label class="dot-font">Kapitał</label> <br>
-            <input id="new_offer-capital" alt="new_offer-capital" type="text"> <br>
+            <input id="new_offer-capital" alt="new_offer-capital" type="text" required> <br>
           </div>
           <div style="margin: 0px 5px;">
             <label class="dot-font">Cena</label> <br>
-            <input id="new_offer-price" alt="new_offer-price" type="text"> <br>
+            <input id="new_offer-price" alt="new_offer-price" type="text" required> <br>
           </div>
           <div style="margin: 0px 0px 0px 5px;">
             <label class="dot-font">Kontakt</label> <br>
-            <input id="new_offer-contact" alt="new_offer-contact" type="text"> <br>
+            <input id="new_offer-contact" alt="new_offer-contact" type="text" required> <br>
           </div>
         </div>
         <button type="submit" class="dot-font">Dodaj ogłoszenie</button>
