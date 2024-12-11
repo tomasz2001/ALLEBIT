@@ -21,10 +21,13 @@ type Debug = {
 
 };
 
+<<<<<<< Updated upstream
 let delay : Nat = 1_620_000_000_000;
 var time : Int = Time.now();
 var meit : Nat = 1;
 
+=======
+>>>>>>> Stashed changes
 let offer = Buffer.Buffer<Freedom>(15);
 
 offer.add({ cozaco = "Oferta 1"; kontakt = "andzej facebook"; oferta = "sprzedam byc na olx"; kapital = "40000 satosi"; cena = "100000 USD za BTC" });
@@ -48,9 +51,12 @@ let result = offer.get(0);
 
 
 public func oferta_add(cozaco: Text, kontakt: Text, oferta: Text, kapital: Text, cena: Text,) : async Debug {
+<<<<<<< Updated upstream
 if (Text.size(cozaco) == 0 or Text.size(kontakt) == 0 or Text.size(oferta) == 0 or Text.size(kapital) == 0 or Text.size(cena) == 0) {
  return({log = "ER"; deb = "przynajmniej jedno pole jest puste"});
 };
+=======
+>>>>>>> Stashed changes
 
 let x = offer.remove(0);
 offer.add({ cozaco = cozaco; kontakt = kontakt; oferta = oferta; kapital = kapital; cena = cena });
@@ -59,3 +65,9 @@ return({log = "OK"; deb = "oferta dodana"});
 };
 };
 
+<<<<<<< Updated upstream
+=======
+return({log = "OK"; deb = "oferta dodana"});
+};
+};
+>>>>>>> Stashed changes
