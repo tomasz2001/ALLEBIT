@@ -1,37 +1,117 @@
-body {
-  font-family: sans-serif;
-  font-size: 1.5rem;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
-img {
-  max-width: 50vw;
-  max-height: 25vw;
-  display: block;
-  margin: auto;
+.dot-font {
+  font-family: "Doto", sans-serif;
 }
 
-form {
+.nav-title {
+  font-size: 32px;
+}
+
+nav {
+  padding: 4px 8px;
+}
+
+main {
+  padding: 5px 10px;
+}
+
+.offer {
+  margin: 2px 5px;
+  padding: 5px;
+  box-shadow: 2px 2px 5px black;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav {
   display: flex;
-  justify-content: center;
-  gap: 0.5em;
-  flex-flow: row wrap;
-  max-width: 40vw;
-  margin: auto;
-  align-items: baseline;
+  align-items: center;
+  justify-content: space-between;
 }
 
-button[type="submit"] {
-  padding: 5px 20px;
-  margin: 10px auto;
-  float: right;
+.offers {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-#greeting {
-  margin: 10px auto;
-  padding: 10px 60px;
-  border: 1px solid #222;
+form .dot-font {
+  font-weight: 700;
 }
 
-#greeting:empty {
-  display: none;
+form label {
+  font-size: 20px;
+}
+
+form input {
+  width: 100%;
+}
+
+form textarea {
+  width: 100%;
+}
+
+form button {
+  font-size: 17px;
+  font-weight: 900;
+  border-radius: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 3px;
+  background-color: white;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+}
+
+.wait-icon {
+  animation-name: spinning-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  width: fit-content;
+  height: fit-content;
+  margin: 0px auto;
+  font-size: 30px;
+}
+
+.wait-label {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.wait-container {
+  text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+  .offers {
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .offers {
+    grid-template-columns: repeat(1, minmax(50px, 1fr));
+  }
+}
+
+@keyframes spinning-animation {
+  0% {transform: rotate(0deg);}
+  //25% {transition: rotate(90deg);}
+  50% {transform: rotate(180deg);}
+  //75% {transform: rotate(270deg);}
+  100% {transform: rotate(360deg);}
 }
