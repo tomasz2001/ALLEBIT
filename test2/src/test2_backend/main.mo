@@ -25,14 +25,10 @@ let delay : Nat = 1_620_000_000_000;
 var time : Int = Time.now();
 var meit : Nat = 1;
 
-let offer = Buffer.Buffer<Freedom>(15);
+let offer = Buffer.Buffer<Freedom>(17);
 
 offer.add({ cozaco = "Oferta 1"; kontakt = "andzej facebook"; oferta = "sprzedam byc na olx"; kapital = "40000 satosi"; cena = "100000 USD za BTC" });
 offer.add({ cozaco = "Oferta 2"; kontakt = "andzej facebook"; oferta = "sprzedam byc na olx"; kapital = "40000 satosi"; cena = "100000 USD za BTC" });
-offer.add({ cozaco = "Oferta 3"; kontakt = "andzej facebook"; oferta = "sprzedam byc na olx"; kapital = "40000 satosi"; cena = "100000 USD za BTC" });
-offer.add({ cozaco = "Oferta 4"; kontakt = "andzej facebook"; oferta = "sprzedam byc na olx"; kapital = "40000 satosi"; cena = "100000 USD za BTC" });
-offer.add({ cozaco = "Oferta 5"; kontakt = "andzej facebook"; oferta = "sprzedam byc na olx"; kapital = "40000 satosi"; cena = "100000 USD za BTC" });
-offer.add({ cozaco = "Oferta 6"; kontakt = "andzej facebook"; oferta = "sprzedam byc na olx"; kapital = "40000 satosi"; cena = "100000 USD za BTC" });
 
 public query func oferta_cek(marker: Nat) : async Freedom {
 
@@ -52,7 +48,12 @@ if (Text.size(cozaco) == 0 or Text.size(kontakt) == 0 or Text.size(oferta) == 0 
  return({log = "ER"; deb = "przynajmniej jedno pole jest puste"});
 };
 
+if (15 <= offer.size()){
 let x = offer.remove(0);
+
+
+};
+
 offer.add({ cozaco = cozaco; kontakt = kontakt; oferta = oferta; kapital = kapital; cena = cena });
 let time = Time.now();
 return({log = "OK"; deb = "oferta dodana"});
