@@ -89,8 +89,8 @@ onMounted(async () => {
       <div v-for="offer in offers" :key="offer.cozaco" class="offer" :class="{ dark: isDarkTheme }">
         <h1 class="dot-font">{{ offer.cozaco }}</h1>
         <p>{{ offer.oferta }}</p>
-        <p>{{ offer.kapital }}</p>
-        <h2 class="dot-font"><i class="bi bi-cash"></i> {{ offer.cena }}</h2>
+        <p><i class="bi bi-cash-coin"></i> {{ offer.kapital }}</p>
+        <h2 class="dot-font"><i class="bi bi-percent"></i> {{ offer.cena }}</h2>
         <p><i class="bi bi-envelope-fill"></i> {{ offer.kontakt }}</p>
       </div>
     </div>
