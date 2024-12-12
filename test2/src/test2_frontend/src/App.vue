@@ -7,6 +7,7 @@ let show_output = false;
 let output = "";
 let request_status = '';
 const isDarkTheme = ref(window.matchMedia('(prefers-color-scheme: dark)').matches);
+const max_offers = 25;
 
 async function handleSubmit(e) {
   e.preventDefault();
@@ -21,7 +22,7 @@ async function handleSubmit(e) {
   output = result.deb;
   request_status = result.log;
   show_output = true;
-  await getOffers(10);
+  await getOffers(max_offers);
 }
 
 async function getOffers(n) {
@@ -43,7 +44,7 @@ function toggleTheme() {
 }
 
 onMounted(async () => {
-  await getOffers(10);
+  await getOffers(max_offers);
 });
 </script>
 
