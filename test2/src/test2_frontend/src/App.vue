@@ -5,7 +5,7 @@ import { test2_backend } from 'declarations/test2_backend/index';
 const offers = ref([]);
 let show_output = false;
 let output = "";
-let request_status = "";
+let request_status = '';
 const isDarkTheme = ref(window.matchMedia('(prefers-color-scheme: dark)').matches);
 
 async function handleSubmit(e) {
@@ -58,7 +58,7 @@ onMounted(async () => {
   </header>
 
   <main :class="{ dark: isDarkTheme }">
-    <div v-show="show_output == true" class="message" v-bind:class="`${!request_status['OK'] ? 'okMessageStyle' : 'errorMessageStyle'}`">
+    <div v-show="show_output == true" class="message" :class="{ okMessageStyle: request_status === 'OK', errorMessageStyle: request_status === 'ER' }">
       {{ output }}
     </div>
     <div class="add-offer">
@@ -66,7 +66,7 @@ onMounted(async () => {
         <label class="dot-font">Tytuł</label> <br>
         <input id="new_offer-title" alt="new_offer-title" type="text" required :class="{ dark: isDarkTheme }"> <br>
         <label class="dot-font">Opis</label> <br>
-        <textarea id="new_offer-description" alt="new_offer-description" type="text" required :class="{ dark: isDarkTheme }"></textarea> <br>
+        <textarea id="new_offer-description" alt="new_offer-description" type="text" required :class="{ dark: isDarkTheme }" rows="10"></textarea> <br>
         <div class="grid-3">
           <div style="margin: 0px 5px 0px 0px;">
             <label class="dot-font">Kapitał</label> <br>
@@ -81,7 +81,7 @@ onMounted(async () => {
             <input id="new_offer-contact" alt="new_offer-contact" type="text" required :class="{ dark: isDarkTheme }"> <br>
           </div>
         </div>
-        <button type="submit" class="dot-font" :class="{ dark: isDarkTheme }">Dodaj ogłoszenie</button>
+        <button type="submit" class="dot-font" :class="{ dark: isDarkTheme }"><i class="bi bi-plus-lg"></i> Dodaj ogłoszenie</button>
       </form>
     </div>
     <div v-if="offers.length" class="offers">
@@ -89,8 +89,8 @@ onMounted(async () => {
         <h1 class="dot-font">{{ offer.cozaco }}</h1>
         <p>{{ offer.oferta }}</p>
         <p>{{ offer.kapital }}</p>
-        <h2 class="dot-font">{{ offer.cena }}</h2>
-        <p>{{ offer.kontakt }}</p>
+        <h2 class="dot-font"><i class="bi bi-cash"></i> {{ offer.cena }}</h2>
+        <p><i class="bi bi-envelope-fill"></i> {{ offer.kontakt }}</p>
       </div>
     </div>
     <div v-else class="wait-container">

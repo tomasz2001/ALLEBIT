@@ -44,6 +44,12 @@
           <option name="readOnly" value="false" />
         </ForwardedPortInfo>
       </entry>
+      <entry key="38005">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="38005" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
       <entry key="38753">
         <ForwardedPortInfo>
           <option name="hostPort" value="38753" />
@@ -119,6 +125,18 @@
       <entry key="44307">
         <ForwardedPortInfo>
           <option name="hostPort" value="44307" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="45045">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="45045" />
+          <option name="readOnly" value="false" />
+        </ForwardedPortInfo>
+      </entry>
+      <entry key="45819">
+        <ForwardedPortInfo>
+          <option name="hostPort" value="45819" />
           <option name="readOnly" value="false" />
         </ForwardedPortInfo>
       </entry>

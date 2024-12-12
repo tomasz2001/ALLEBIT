@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74b4cb6d-e1f1-4373-a619-c27edfa5a764" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/test2/.dfx/local/canister_ids.json" beforeDir="false" afterPath="$PROJECT_DIR$/test2/.dfx/local/canister_ids.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.dfx/local/canisters/test2_backend/constructor.did" beforeDir="false" afterPath="$PROJECT_DIR$/test2/.dfx/local/canisters/test2_backend/constructor.did" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.dfx/local/canisters/test2_backend/service.did" beforeDir="false" afterPath="$PROJECT_DIR$/test2/.dfx/local/canisters/test2_backend/service.did" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.dfx/local/canisters/test2_backend/service.did.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test2/.dfx/local/canisters/test2_backend/service.did.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.dfx/local/canisters/test2_backend/service.did.js" beforeDir="false" afterPath="$PROJECT_DIR$/test2/.dfx/local/canisters/test2_backend/service.did.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.dfx/local/canisters/test2_backend/test2_backend.did" beforeDir="false" afterPath="$PROJECT_DIR$/test2/.dfx/local/canisters/test2_backend/test2_backend.did" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/forwardedPorts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/forwardedPorts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test2/.dfx/local/canisters/test2_backend/test2_backend.wasm" beforeDir="false" afterPath="$PROJECT_DIR$/test2/.dfx/local/canisters/test2_backend/test2_backend.wasm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.dfx/local/lsp/be2us-64aaa-aaaaa-qaabq-cai.did" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.dfx/local/lsp/br5f7-7uaaa-aaaaa-qaaca-cai.did" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.dfx/local/network-id" beforeDir="false" afterPath="$PROJECT_DIR$/test2/.dfx/local/network-id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.env" beforeDir="false" afterPath="$PROJECT_DIR$/test2/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/src/declarations/test2_backend/test2_backend.did" beforeDir="false" afterPath="$PROJECT_DIR$/test2/src/declarations/test2_backend/test2_backend.did" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/src/declarations/test2_backend/test2_backend.did.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test2/src/declarations/test2_backend/test2_backend.did.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/src/declarations/test2_backend/test2_backend.did.js" beforeDir="false" afterPath="$PROJECT_DIR$/test2/src/declarations/test2_backend/test2_backend.did.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test2/src/test2_frontend/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test2/src/test2_frontend/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test2/src/test2_frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/test2/src/test2_frontend/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test2/src/test2_frontend/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/test2/src/test2_frontend/src/index.scss" afterDir="false" />
@@ -60,7 +49,7 @@
       <window_info id="Merge Requests" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11555989" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10449219" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.19303384" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -70,13 +59,13 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.24080881" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.21384804" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.20159313" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.2555147" />
       <window_info anchor="bottom" id="Services" order="5" weight="0.2555147" />
       <window_info anchor="right" id="Endpoints" />
       <window_info anchor="right" id="documentation.v2" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
-      <window_info anchor="right" id="Notifications" order="0" weight="0.32975262" />
+      <window_info anchor="right" id="Notifications" order="0" weight="0.3300866" />
       <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
       <window_info anchor="right" id="Database" order="2" weight="0.2503255" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
@@ -110,6 +99,7 @@
       <workItem from="1733912271324" duration="1803000" />
       <workItem from="1733915015335" duration="11283000" />
       <workItem from="1733932401571" duration="5650000" />
+      <workItem from="1734003460034" duration="2412000" />
     </task>
     <servers />
   </component>
